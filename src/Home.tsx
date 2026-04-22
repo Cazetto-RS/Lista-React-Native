@@ -18,11 +18,14 @@ export default function(){
 
     return (
         <View style={styles.container}>
+            <Text style={styles.title}>Selecione uma opção e seja feliz!</Text>
+
             <FlatList
                 numColumns={1}
                 style={styles.lista}
                 data={DATA}
-                keyExtractor={(item) = item.id}
+                renderItem={renderItens}
+                showsVerticalScrollIndicator={false}
             />
         </View>
     );
